@@ -1,0 +1,9 @@
+.test {
+  color: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -o-object-fit: contain;
+     object-fit: contain; }
+  .test__inner {
+    background: #000; }
