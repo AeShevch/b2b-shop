@@ -1,0 +1,9 @@
+.test {
+  color: red;
+  display: flex;
+  object-fit: contain;
+  
+  &__inner {
+    background: #000;
+  }
+}
