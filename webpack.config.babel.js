@@ -23,8 +23,8 @@ Encore.setOutputPath(PATH_TO_ROOT)
   .BXComponentJs("nbc:blank")
   .BXComponentStyle("nbc:blank")
 
-  .enableSassLoader()
   .enablePostCssLoader()
+  .enableSassLoader()
   .enableVueLoader()
   .enableSourceMaps(false)
 

@@ -8,7 +8,6 @@
   "devDependencies": {
     "@symfony/webpack-encore": "^0.10.0",
     "autoprefixer": "^10.2.3",
-    "axios": "^0.15.3",
     "babel": "*",
     "babel-plugin-syntax-class-properties": "*",
     "babel-plugin-syntax-trailing-function-commas": "*",
@@ -23,11 +22,8 @@
     "babel-preset-env": "*",
     "babel-preset-stage-0": "*",
     "babel-preset-vue-app": "*",
-    "bootstrap-sass": "^3.3.7",
     "cross-env": "^3.2.3",
-    "jquery": "*",
-    "laravel-mix": "^0.11.4",
-    "lodash": "^4.17.4",
+    "node-sass": "^5.0.0",
     "postcss": "^8.2.4",
     "postcss-cli": "^8.3.1",
     "postcss-csso": "^5.0.0",
@@ -37,10 +33,13 @@
     "stylus-loader": "^3.0.1",
     "vee-validate": "^0.9.3",
     "vue": "*",
+    "vue-loader": "^15.9.6",
     "vue-style-loader": "^3.0.3",
+    "vue-template-compiler": "^2.6.12",
     "webpack-encoding-plugin": "^0.2.1"
   },
   "dependencies": {
+    "bootstrap": "^5.0.0-beta1",
     "sass": "^1.0.0-beta.2",
     "vue-masked-input": "^0.5.2",
     "vue-router": "^2.7.0"
