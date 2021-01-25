@@ -1,0 +1,32 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "browsers": [
+            "last 2 versions",
+            "safari >= 7"
+          ]
+        }
+      }
+    ]
+  ],
+  "plugins": [
+    "syntax-trailing-function-commas",
+    "transform-async-to-generator",
+    "babel-plugin-transform-es2015-destructuring",
+    "babel-plugin-transform-es2015-parameters",
+    "babel-plugin-transform-es2015-duplicate-keys",
+    "babel-plugin-transform-es2015-modules-commonjs",
+    "babel-plugin-transform-exponentiation-operator",
+    "babel-plugin-transform-runtime"
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        "rewire"
+      ]
+    }
+  }
+}

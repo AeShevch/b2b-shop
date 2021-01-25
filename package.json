@@ -1,27 +1,52 @@
 {
-  "name": "b2b-shop",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "./node_modules/.bin/encore dev --progress --hide-modules",
+    "watch": "./node_modules/.bin/encore dev --watch --progress --hide-modules",
+    "prod": "./node_modules/.bin/encore production --progress --hide-modules"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AeShevch/b2b-shop.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/AeShevch/b2b-shop/issues"
-  },
-  "homepage": "https://github.com/AeShevch/b2b-shop#readme",
   "devDependencies": {
-    "autoprefixer": "^10.2.1",
-    "rollup-plugin-postcss": "^4.0.0",
-    "rollup-plugin-scss": "^2.6.1"
+    "@symfony/webpack-encore": "^0.10.0",
+    "autoprefixer": "^10.2.3",
+    "axios": "^0.15.3",
+    "babel": "*",
+    "babel-plugin-syntax-class-properties": "*",
+    "babel-plugin-syntax-trailing-function-commas": "*",
+    "babel-plugin-transform-async-to-generator": "*",
+    "babel-plugin-transform-class-properties": "*",
+    "babel-plugin-transform-es2015-destructuring": "*",
+    "babel-plugin-transform-es2015-duplicate-keys": "*",
+    "babel-plugin-transform-es2015-modules-commonjs": "*",
+    "babel-plugin-transform-es2015-parameters": "*",
+    "babel-plugin-transform-exponentiation-operator": "*",
+    "babel-plugin-transform-object-rest-spread": "*",
+    "babel-preset-env": "*",
+    "babel-preset-stage-0": "*",
+    "babel-preset-vue-app": "*",
+    "bootstrap-sass": "^3.3.7",
+    "cross-env": "^3.2.3",
+    "jquery": "*",
+    "laravel-mix": "^0.11.4",
+    "lodash": "^4.17.4",
+    "postcss": "^8.2.4",
+    "postcss-cli": "^8.3.1",
+    "postcss-csso": "^5.0.0",
+    "postcss-loader": "^4.2.0",
+    "sass-loader": "^6.0.6",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1",
+    "vee-validate": "^0.9.3",
+    "vue": "*",
+    "vue-style-loader": "^3.0.3",
+    "webpack-encoding-plugin": "^0.2.1"
   },
   "dependencies": {
-    "bootstrap": "^5.0.0-beta1"
-  }
+    "sass": "^1.0.0-beta.2",
+    "vue-masked-input": "^0.5.2",
+    "vue-router": "^2.7.0"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "safari >= 7"
+  ]
 }
