@@ -18,10 +18,14 @@ $curPage = $APPLICATION->GetCurPage(true);
   <link rel="preload" href="/local/templates/b2b-shop/fonts/open-sans-v18-latin_cyrillic-700.woff2"
         as="font" type="font/woff2" crossorigin="anonymous">
 
-    <? $APPLICATION->ShowHead(); ?>
     <?php
+    $APPLICATION->ShowHead();
+    use Bitrix\Main\Page\Asset;
+
     // Основные стили шаблона
-    $this->addExternalCss(SITE_TEMPLATE_PATH . "/dist/bundle.min.css");
+    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/dist/bundle.min.css");
+    // Основный скрипт шаблона
+    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/dist/bundle.min.js");
     ?>
 </head>
 <body>

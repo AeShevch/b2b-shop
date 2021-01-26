@@ -1,0 +1,24 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: var(--main-font);
+  font-size: 14px;
+  overflow-x: hidden;
+
+  & > main {
+    flex-grow: 1;
+    //overflow: hidden;
+  }
+}

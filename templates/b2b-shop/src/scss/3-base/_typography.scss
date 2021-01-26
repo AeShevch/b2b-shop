@@ -39,3 +39,8 @@
   url('/local/templates/b2b-shop/fonts/open-sans-v18-latin_cyrillic-700.woff') format('woff'), /* Modern Browsers */
   url('/local/templates/b2b-shop/fonts/open-sans-v18-latin_cyrillic-700.ttf') format('truetype'); /* Safari, Android, iOS */
 }
+
+body {
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+}
