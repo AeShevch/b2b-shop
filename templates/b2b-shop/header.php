@@ -10,6 +10,14 @@ $curPage = $APPLICATION->GetCurPage(true);
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title><? $APPLICATION->ShowTitle() ?></title>
   <link rel="shortcut icon" type="image/x-icon" href="<?= SITE_DIR ?>favicon.ico"/>
+
+  <link rel="preload" href="/local/templates/b2b-shop/fonts/open-sans-v18-latin_cyrillic-regular.woff2"
+        as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/local/templates/b2b-shop/fonts/open-sans-v18-latin_cyrillic-600.woff2"
+        as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/local/templates/b2b-shop/fonts/open-sans-v18-latin_cyrillic-700.woff2"
+        as="font" type="font/woff2" crossorigin="anonymous">
+
     <? $APPLICATION->ShowHead(); ?>
     <?php
     // Основные стили шаблона

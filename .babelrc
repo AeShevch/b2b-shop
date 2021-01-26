@@ -1,7 +1,7 @@
 {
   "presets": [
     [
-      "env",
+      "@babel/preset-env",
       {
         "targets": {
           "browsers": [
@@ -13,14 +13,13 @@
     ]
   ],
   "plugins": [
-    "syntax-trailing-function-commas",
-    "transform-async-to-generator",
-    "babel-plugin-transform-es2015-destructuring",
-    "babel-plugin-transform-es2015-parameters",
-    "babel-plugin-transform-es2015-duplicate-keys",
-    "babel-plugin-transform-es2015-modules-commonjs",
-    "babel-plugin-transform-exponentiation-operator",
-    "babel-plugin-transform-runtime"
+    "@babel/syntax-dynamic-import",
+    [ "@babel/plugin-proposal-class-properties", { "loose": true } ],
+    "@babel/plugin-transform-async-to-generator",
+    "@babel/plugin-transform-runtime",
+    "@babel/plugin-syntax-class-properties",
+    "@babel/plugin-syntax-object-rest-spread",
+    "@babel/plugin-transform-destructuring"
   ],
   "env": {
     "test": {

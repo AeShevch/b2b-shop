@@ -1,5 +1,6 @@
 "use strict";
 const Encore = require("./webpackUtils/Encore.extend");
+
 import path from "path";
 import FriendlyErrorsWebpackPlugin from "friendly-errors-webpack-plugin";
 // раскоментить, если сайт работает в cp1251
@@ -7,6 +8,7 @@ import FriendlyErrorsWebpackPlugin from "friendly-errors-webpack-plugin";
 import BComponent from "./webpackUtils/BComponent";
 
 const PATH_TO_ROOT = "..";
+const TEMPLATE_PATH = "local/templates/b2b-shop";
 
 const rootPath = (p = "") => {
   const root = path.resolve(__dirname, PATH_TO_ROOT);
@@ -16,7 +18,9 @@ const rootPath = (p = "") => {
 Encore.BXComponent = new BComponent({ root: rootPath() });
 
 process.noDeprecation = true;
-Encore.setOutputPath(PATH_TO_ROOT)
+
+Encore
+  .setOutputPath(PATH_TO_ROOT)
   .setPublicPath(rootPath())
 
   // файлы выхода (out) надо указывать без расширения
@@ -26,7 +30,16 @@ Encore.setOutputPath(PATH_TO_ROOT)
   .enablePostCssLoader()
   .enableSassLoader()
   .enableVueLoader()
-  .enableSourceMaps(false)
+  .enableSourceMaps(!Encore.isProduction())
+
+  .addLoader({
+    test: /\.(woff|woff2|eot|ttf|otf)$/,
+    use: [
+      {
+        loader: "file-loader",
+      },
+    ],
+  })
 
   // если сайт работает в cp1251, то подключаем этот плагин,
   // при этом все файлы для сборки (.js, .sass, .css и пр) должны быть в utf-8, плагин сам их конвертит при сборке
@@ -67,11 +80,9 @@ if (!config.resolve.hasOwnProperty("modules")) {
 config.performance = { hints: false };
 
 // Добавляем шаблон
-const TEMPLATE_PATH = "local/templates/b2b-shop";
 config.entry[
   `${TEMPLATE_PATH}/dist/bundle.min`
 ] = `${rootPath()}/${TEMPLATE_PATH}/src/js/app.js`;
-
 
 // fs.writeFileSync('./encore_conf.txt', JSON.stringify(config.plugins));
 // console.info(config.plugins);
