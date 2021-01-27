@@ -8,7 +8,8 @@ import FriendlyErrorsWebpackPlugin from "friendly-errors-webpack-plugin";
 import BComponent from "./webpackUtils/BComponent";
 
 const PATH_TO_ROOT = "..";
-const TEMPLATE_PATH = "local/templates/b2b-shop";
+const TEMPLATE_NAME = "b2b-shop";
+const TEMPLATE_PATH = `local/templates/${TEMPLATE_NAME}`;
 
 const rootPath = (p = "") => {
   const root = path.resolve(__dirname, PATH_TO_ROOT);
@@ -19,13 +20,18 @@ Encore.BXComponent = new BComponent({ root: rootPath() });
 
 process.noDeprecation = true;
 
-Encore
-  .setOutputPath(PATH_TO_ROOT)
+Encore.setOutputPath(PATH_TO_ROOT)
   .setPublicPath(rootPath())
 
+  // Подключение компонентов
   // файлы выхода (out) надо указывать без расширения
-  .BXComponentJs("nbc:blank")
-  .BXComponentStyle("nbc:blank")
+  .BXComponentJs("nbc:city-select")
+  .BXComponentStyle("nbc:city-select")
+
+  .BXComponentStyle("bitrix:menu", {
+    siteTemplate: ".default",
+    template: "menu.header-top",
+  })
 
   .enablePostCssLoader()
   .enableSassLoader()

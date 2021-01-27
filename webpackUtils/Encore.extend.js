@@ -27,9 +27,18 @@ Encore.BXComponentJs = (name, params = {}) => {
   // мержим дефолтные параметры со входными
   const paramsJs = Object.assign(
     {},
-    { app: "app.js", out: "script", template: ".default", siteTemplate: false },
+    {
+      app: "js/app.js",
+      out: "script",
+      template: ".default",
+      siteTemplate: false,
+    },
     params
   );
+
+  if (!paramsJs.siteTemplate) {
+    paramsJs.app = `../templates/${paramsJs.template}/src/${paramsJs.app}`;
+  }
 
   // получаем точки вход/выход
   let entry = Encore.BXComponent.getEntry(name, paramsJs);
@@ -59,22 +68,27 @@ Encore.BXComponentJs = (name, params = {}) => {
  * @constructor
  */
 Encore.BXComponentStyle = (name, params = {}) => {
-  const paramsCss = {
-    app: "../templates/.default/scss/main.scss",
-    template: ".default",
-    siteTemplate: false,
-    out: 'style'
-  };
+  const paramsCss = Object.assign(
+    {},
+    {
+      app: "scss/main.scss",
+      template: ".default",
+      siteTemplate: false,
+      out: "style",
+    },
+    params
+  );
+
+  if (!paramsCss.siteTemplate) {
+    paramsCss.app = `../templates/${paramsCss.template}/src/${paramsCss.app}`;
+  }
 
   // if (!params.hasOwnProperty("out")) {
   //   params.out =
   //     name.replace(":", "_") + "_" + paramsCss.template.replace(".", "");
   // }
 
-  const entry = Encore.BXComponent.getStyleEntry(
-    name,
-    Object.assign({}, paramsCss, params)
-  );
+  const entry = Encore.BXComponent.getStyleEntry(name, paramsCss);
   return Encore.addStyleEntry(entry.build, entry.app);
 };
 

@@ -64,10 +64,10 @@ class BComponent {
 
 			// если в параметрах указан siteTemplate, значит компонент лежит там и пути надо строить с его учетом
 			if(params.siteTemplate){
-				appPath = path.join(folder, params.template, 'app');
+				appPath = path.join(folder, params.template, 'src');
 				buildPath = path.join(folder, params.template);
 			} else {
-				appPath = path.join(folder, 'app');
+				appPath = path.join(folder, 'src');
 				if(arName[0] === 'bitrix'){
 					buildPath = path.join(folder, params.template);
 				} else {
@@ -76,9 +76,9 @@ class BComponent {
 			}
 
 			// если в компоненте нет папки /app - создадим ее
-			if(!fs.existsSync(appPath)){
-				fs.mkdirSync(appPath, 0o775);
-			}
+			// if(!fs.existsSync(appPath)){
+			// 	fs.mkdirSync(appPath, 0o775);
+			// }
 
 			// если в компоненте нет файла, указанного в параметре app - создадим его
 			if(!fs.existsSync(path.join(appPath, params.app))){
