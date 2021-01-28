@@ -28,10 +28,10 @@ Encore.setOutputPath(PATH_TO_ROOT)
   .BXComponentJs("nbc:city-select")
   .BXComponentStyle("nbc:city-select")
 
-  .BXComponentStyle("bitrix:menu", {
-    siteTemplate: ".default",
-    template: "menu.header-top",
-  })
+  // .BXComponentStyle("bitrix:menu", {
+  //   siteTemplate: ".default",
+  //   template: "menu.header-top",
+  // })
 
   .enablePostCssLoader()
   .enableSassLoader()
