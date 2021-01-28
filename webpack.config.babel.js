@@ -23,14 +23,34 @@ process.noDeprecation = true;
 Encore.setOutputPath(PATH_TO_ROOT)
   .setPublicPath(rootPath())
 
-  // Подключение компонентов
+  // Подключение компонентов в сборку webpack
   // файлы выхода (out) надо указывать без расширения
+
+  // Компонент выбора города
   .BXComponentJs("nbc:city-select")
   .BXComponentStyle("nbc:city-select")
 
+  // Компонент «Верхнее меню»
   .BXComponentStyle("bitrix:menu", {
     siteTemplate: ".default",
     template: "menu.header-top",
+  })
+
+  // Компонент «Поиск в шапке»
+  .BXComponentStyle("bitrix:search.form", {
+    siteTemplate: ".default"
+  })
+
+  // Компонент «Главное меню»
+  .BXComponentStyle("bitrix:menu", {
+    siteTemplate: ".default",
+    template: "menu.main",
+  })
+
+  // Компонент «Вертикальное меню»
+  .BXComponentStyle("bitrix:menu", {
+    siteTemplate: ".default",
+    template: "menu.vertical",
   })
 
   .enablePostCssLoader()
