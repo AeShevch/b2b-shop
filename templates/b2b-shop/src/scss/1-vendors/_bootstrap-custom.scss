@@ -1,0 +1,8 @@
+// Bootstrap vars rewrite
+$border-color: var(--border-color);
+
+.border-bottom {
+  &_on-dark {
+    --border-color: var(--dark-gray);
+  }
+}

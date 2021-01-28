@@ -1,0 +1,26 @@
+.header {
+  box-shadow: var(--base-shadow);
+  background-color: var(--white);
+
+  &__top {
+    padding: 6px 0 7px;
+    background-color: var(--top-header-bg-color);
+    color: var(--top-header-text-color);
+  }
+
+  &__contacts {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    a {
+      &:not(:last-of-type) {
+        margin-right: 2.5rem;
+      }
+    }
+  }
+
+  &__main {
+    padding: 16px 0 12px;
+  }
+}

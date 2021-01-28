@@ -40,7 +40,10 @@
   url('/local/templates/b2b-shop/fonts/open-sans-v18-latin_cyrillic-700.ttf') format('truetype'); /* Safari, Android, iOS */
 }
 
-body {
-  font-size: 14px;
-  font-family: 'Open Sans', sans-serif;
+html {
+  font-size: var(--base-font-size);
+  font-weight: 400;
+  line-height: var(--base-line-hight);
+  font-family: var(--base-font);
 }
+

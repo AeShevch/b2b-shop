@@ -1,0 +1,25 @@
+.main-menu {
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    padding: 8px 0 9px;
+
+    &:not(:last-of-type) {
+      margin-right: 2.5rem;
+    }
+  }
+
+  &__link {
+    color: var(--main-menu-text-color);
+    text-decoration: none;
+    font-size: calc(1rem - 1px);
+    font-weight: 600;
+
+    &:hover {
+      color: var(--accent--main-menu-hover-text-color);
+    }
+
+  }
+}

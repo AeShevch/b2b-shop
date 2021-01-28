@@ -11,11 +11,11 @@ $curPage = $APPLICATION->GetCurPage(true);
   <title><? $APPLICATION->ShowTitle() ?></title>
   <link rel="shortcut icon" type="image/x-icon" href="<?= SITE_DIR ?>favicon.ico"/>
 
-  <link rel="preload" href="/local/templates/b2b-shop/fonts/open-sans-v18-latin_cyrillic-regular.woff2"
+  <link rel="preload" href="<?= SITE_TEMPLATE_PATH ?>/fonts/open-sans-v18-latin_cyrillic-regular.woff2"
         as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="/local/templates/b2b-shop/fonts/open-sans-v18-latin_cyrillic-600.woff2"
+  <link rel="preload" href="<?= SITE_TEMPLATE_PATH ?>/fonts/open-sans-v18-latin_cyrillic-600.woff2"
         as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="/local/templates/b2b-shop/fonts/open-sans-v18-latin_cyrillic-700.woff2"
+  <link rel="preload" href="<?= SITE_TEMPLATE_PATH ?>/fonts/open-sans-v18-latin_cyrillic-700.woff2"
         as="font" type="font/woff2" crossorigin="anonymous">
 
     <?php
@@ -34,3 +34,5 @@ $curPage = $APPLICATION->GetCurPage(true);
 <?
 // Header
 $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . "/layouts/header.php"); ?>
+
+<main>

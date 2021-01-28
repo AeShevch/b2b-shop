@@ -1,0 +1,34 @@
+.footer {
+  $self: &;
+
+  background-color: var(--footer-bg-color);
+  color: var(--muted-text-color);
+  font-size: 1rem;
+
+  &__col {
+    &:last-child {
+      #{$self}__header:after {
+        right: 0;
+      }
+    }
+  }
+
+  &__header {
+    position: relative;
+    width: 100%;
+    padding: 28px 0 16px;
+    color: var(--white);
+    font-size: 1.4em;
+    font-weight: 700;
+
+    &:after {
+      position: absolute;
+      right: calc(var(--bs-gutter-x) * -1);
+      bottom: 0;
+      left: 0;
+      height: 1px;
+      background: var(--dark-gray);
+      content: "";
+    }
+  }
+}

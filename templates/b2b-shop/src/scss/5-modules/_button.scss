@@ -1,0 +1,45 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.25em;
+  padding: 0 1em;
+  background-color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: var(--base-radius);
+  color: var(--white);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: var(--transition-time);
+
+  svg {
+    fill: currentColor;
+    width: 1.5em;
+    height: 1.5em;
+  }
+
+  &_outline {
+    height: 1.7em;
+    padding: 0 .5rem;
+    background-color: var(--white);
+    color: var(--accent);
+    font-size: calc(1rem - 1px);
+
+    &:hover {
+      background-color: var(--accent);
+      color: var(--white);
+    }
+
+    svg {
+      width: 1em;
+      height: 1em;
+    }
+  }
+
+  & > *:first-child {
+    margin-right: .5em;
+  }
+
+  @include focus;
+}

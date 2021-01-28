@@ -1,0 +1,60 @@
+:root {
+  // Colors
+  --blue: #2765b9;
+  --orange: #ef7c00;
+  --red: #e83830;
+  --light-gray: #fafafa;
+  --light-text-gray: #828282;
+  --gray: #ebebeb;
+  --medium-gray: #a7a7a7;
+  --dark-gray: #5c5c5c;
+  --black: #000;
+  --green: #27ae60;
+  --white: #fff;
+  --dark: #2b2b2a;
+
+  // Main colors
+  --accent: var(--blue);
+  --secondary: var(--orange);
+  --border-color: var(--gray);
+  --links-color: var(--blue);
+  --main-bg-color: var(--light-gray);
+
+  // Typography
+  --base-font-size: 14px;
+  @include media-breakpoint-up(xxl) {
+    --base-font-size: 16px;
+  }
+
+  --base-line-hight: 1.357;
+  --base-text-color: var(--black);
+  --muted-text-color: --light-text-gray;
+  --base-font: 'Open Sans', sans-serif;
+
+
+
+  // Shadows
+  --base-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  --large-shadow: 0 4px 32px rgba(0, 0, 0, 0.16);
+  --focus-shadow: 0 0 0 0.25rem rgba(13, 110, 253, .25);
+
+  // Border-radius
+  --base-radius: 3px;
+  --big-radius: 5px;
+
+  // Transition
+  --transition-time: .3s;
+
+  // Header
+  --top-header-bg-color: var(--dark-gray);
+  --top-header-text-color: var(--white);
+  --user-links-color: var(--medium-gray);
+  --user-links-color-active: var(--dark-gray);
+  --main-menu-text-color: var(--dark-gray);
+  --main-menu-hover-text-color: var(--accent);
+
+  // Footer
+  --footer-bg-color: var(--dark);
+
+
+}

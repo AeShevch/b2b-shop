@@ -1,0 +1,19 @@
+.header-top-menu {
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+  }
+
+  &__link {
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      color: inherit;
+      text-decoration: underline;
+    }
+
+  }
+}

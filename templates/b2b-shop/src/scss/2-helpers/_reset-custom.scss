@@ -1,0 +1,13 @@
+.select-reset {
+  -webkit-appearance: none;
+  appearance: none;
+  background: none;
+  box-sizing: border-box;
+  font-size: inherit;
+  border: none;
+  color: inherit;
+}
+
+.list-reset {
+  @include listReset;
+}
