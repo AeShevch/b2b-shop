@@ -126,13 +126,17 @@ class BComponent {
 	 */
 	getStyleEntry(ComponentName, params){
 		try {
-			if(!this.components.hasOwnProperty(ComponentName)){
-				this._add(ComponentName, params, 'style');
-			} else if (!this.components[ComponentName].hasOwnProperty('style')){
-				this._add(ComponentName, params, 'style');
-			}
+			if (
+				// TODO !!!
+        !this.components.hasOwnProperty(ComponentName) ||
+        !this.components[ComponentName].hasOwnProperty("style") ||
+        (this.components.hasOwnProperty(ComponentName) &&
+          this.components[ComponentName].hasOwnProperty("style"))
+      ) {
+        this._add(ComponentName, params, "style");
+      }
 
-			return this.components[ComponentName]['style'];
+      return this.components[ComponentName]["style"];
 		} catch (error) {
 			this._getError(error);
 		}
