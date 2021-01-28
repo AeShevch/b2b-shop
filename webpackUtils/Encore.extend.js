@@ -18,7 +18,7 @@ const Encore = require("@symfony/webpack-encore");
  * app - название файла с логикой
  * out - билд-файл, в который все собиарется
  * template - шблон компонента, в котором будет лежать билд
- * siteTemplate - название шаблона сайта, если шаблон компонента не в /local/components/demo
+ * siteTemplate - название шаблона сайта, если шаблон компонента не в /local/components/
  *
  * @returns {Encore}
  * @constructor
@@ -62,7 +62,7 @@ Encore.BXComponentJs = (name, params = {}) => {
  * app - название файла с логикой
  * out - билд-файл, в который все собиарется
  * template - шблон компонента, в котором будет лежать билд
- * siteTemplate - название шаблона сайта, если шаблон компонента не в /local/components/demo
+ * siteTemplate - название шаблона сайта, если шаблон компонента не в /local/components/
  *
  * @returns {Encore}
  * @constructor
@@ -89,6 +89,7 @@ Encore.BXComponentStyle = (name, params = {}) => {
   // }
 
   const entry = Encore.BXComponent.getStyleEntry(name, paramsCss);
+  // console.log(entry);
   return Encore.addStyleEntry(entry.build, entry.app);
 };
 
