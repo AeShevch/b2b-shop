@@ -1,0 +1,57 @@
+$blue: #eaf2fd;
+$green: #e9f7ef;
+$orange: #fdebea;
+
+.trigger-alt {
+  $self: &;
+
+  background-color: var(--white);
+  border-radius: var(--base-radius);
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  padding: 1.4em 2em;
+
+  &__icon {
+    width: 3.7em;
+    height: 3.7em;
+
+    &-bg {
+      padding: 1em;
+      border-radius: 12px;
+      margin-right: 1.4em;
+
+      &_color {
+        &_blue {
+          background-color: $blue;
+
+          #{$self}__icon {
+            fill: var(--accent);
+          }
+        }
+
+        &_green {
+          background-color: $green;
+
+          #{$self}__icon {
+            fill: var(--green);
+          }
+        }
+
+        &_orange {
+          background-color: $orange;
+
+          #{$self}__icon {
+            fill: var(--green);
+          }
+        }
+      }
+    }
+  }
+
+  &__title {
+    font-size: calc(1em + 4px);
+    font-weight: 700;
+    line-height: 1.4;
+  }
+}

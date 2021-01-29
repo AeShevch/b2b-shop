@@ -1,0 +1,23 @@
+.triggers {
+  background-color: var(--white);
+  border-radius: var(--base-radius);
+}
+
+.trigger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  padding: 1.5em;
+
+  &__title {
+    text-align: center;
+    line-height: 1.35;
+  }
+
+  &__icon {
+    margin-bottom: 1em;
+    fill: var(--accent);
+  }
+}

@@ -64,6 +64,15 @@ Encore.setOutputPath(PATH_TO_ROOT)
     template: "main-slider",
   })
 
+  // Готовые решения на главной
+  .BXComponentStyle("nbc:solutions-tabs")
+
+  // Лучшие предложения на главной
+  .BXComponentStyle("bitrix:catalog.top", {
+    siteTemplate: ".default",
+    template: "best-offers",
+  })
+
   .enablePostCssLoader((options) => {
     options.postcssOptions = {
       // plugins: () => [

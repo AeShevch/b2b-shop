@@ -36,6 +36,7 @@
   },
   "dependencies": {
     "@glidejs/glide": "^3.4.1",
+    "@popperjs/core": "^2.6.0",
     "bootstrap": "5.0.0-beta1"
   },
   "browserslist": [

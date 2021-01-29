@@ -1,8 +1,29 @@
 // Bootstrap vars rewrite
-$border-color: var(--border-color);
+$gray-300: var(--border-color);
+
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1140px,
+        xxl: 1356px,
+);
 
 .border-bottom {
   &_on-dark {
     --border-color: var(--dark-gray);
   }
 }
+
+// Контейнер на всю ширину viewport, не смотря на ширину родителей
+.container {
+  &_full-width {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
+}
+

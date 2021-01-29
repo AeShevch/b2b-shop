@@ -1,0 +1,16 @@
+.partners {
+  font-size: 1rem;
+
+  &__title {
+    font-size: 1.4em;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  &__item {
+    background-color: var(--white);
+    border-radius: var(--base-radius);
+    display: flex;
+    justify-content: center;
+  }
+}

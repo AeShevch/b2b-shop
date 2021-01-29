@@ -1,0 +1,20 @@
+@import "~@glidejs/glide/src/assets/sass/glide.core";
+
+.glide {
+  &__bullets {
+    display: flex;
+    background-color: var(--white);
+  }
+
+  &__bullet {
+    flex-grow: 1;
+    height: 8px;
+    background-color: var(--gray);
+    margin-right: 1px;
+    border-radius: 0;
+
+    &--active {
+      background-color: var(--accent);
+    }
+  }
+}

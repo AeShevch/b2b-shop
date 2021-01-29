@@ -1,9 +1,3 @@
 import "../scss/main.scss"
+import { Tab } from 'bootstrap';
 
-class Test {
-  constructor(val) {
-    this._val = val;
-  }
-}
-
-new Test("aasd");

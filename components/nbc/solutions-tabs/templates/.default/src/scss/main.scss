@@ -1,0 +1,42 @@
+.solutions-tabs {
+  background-color: var(--white);
+  font-size: 1rem;
+  padding: 2em 0;
+
+  &__title {
+    font-size: 1.7em;
+    margin-bottom: 1em;
+    font-weight: 700;
+  }
+
+  &__tablist {
+    margin-bottom: 2em!important;
+  }
+}
+
+.solution-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  padding-bottom: 2.5em;
+  overflow: hidden;
+  color: var(--base-text-color);
+  transition: box-shadow var(--transition-time);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &__image {
+    margin-bottom: 1em;
+    width: 100%;
+    height: auto;
+    border-radius: var(--base-radius);
+  }
+
+  &__title {
+    font-size: 1em;
+    font-weight: 400;
+  }
+}
