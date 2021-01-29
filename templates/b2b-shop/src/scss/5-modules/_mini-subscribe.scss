@@ -1,0 +1,27 @@
+.mini-subscribe {
+  font-size: 0.85rem;
+
+  &__label {
+    margin-bottom: .6em;
+  }
+
+  &__input {
+    font-size: 1em;
+    padding: 10px;
+    border-radius: var(--base-radius) 0 0 var(--base-radius);
+    flex-grow: 1;
+  }
+
+  &__inner {
+    display: flex;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 var(--base-radius) var(--base-radius) 0;
+    flex-basis: 48px;
+    background-color: var(--medium-gray);
+  }
+}

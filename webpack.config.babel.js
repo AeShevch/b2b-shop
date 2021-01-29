@@ -1,5 +1,6 @@
 "use strict";
 const Encore = require("./webpackUtils/Encore.extend");
+const postcssLogical = require('postcss-logical');
 
 import path from "path";
 import FriendlyErrorsWebpackPlugin from "friendly-errors-webpack-plugin";
@@ -53,7 +54,23 @@ Encore.setOutputPath(PATH_TO_ROOT)
     template: "menu.vertical",
   })
 
-  .enablePostCssLoader()
+  // Компонент «Слайдер на главной»
+  .BXComponentStyle("bitrix:news.list", {
+    siteTemplate: ".default",
+    template: "main-slider",
+  })
+  .BXComponentJs("bitrix:news.list", {
+    siteTemplate: ".default",
+    template: "main-slider",
+  })
+
+  .enablePostCssLoader((options) => {
+    options.postcssOptions = {
+      // plugins: () => [
+      //   postcssLogical
+      // ]
+    };
+  })
   .enableSassLoader()
   .enableVueLoader()
   .enableSourceMaps(!Encore.isProduction())

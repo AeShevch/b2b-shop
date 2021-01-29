@@ -1,0 +1,20 @@
+.footer-contacts {
+  font-size: 1rem;
+  margin-bottom: 1.3em;
+
+  &__phone {
+    .icon-row {
+      font-size: 1.7em;
+      transition: color var(--transition-time);
+
+      &:hover {
+        color: var(--white);
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__time {
+    margin-left: 2.5em;
+  }
+}

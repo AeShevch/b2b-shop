@@ -6,7 +6,9 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
 $this->setFrameMode(true);
 if (!empty($arResult)): ?>
   <nav class="vertical-menu" role="navigation" aria-label="Главное меню">
-    <h3 class="vertical-menu__title">О компании</h3>
+    <?php if (!empty($arParams["TITLE"])): ?>
+    <h3 class="vertical-menu__title"><?= $arParams["TITLE"] ?></h3>
+    <?php endif; ?>
     <ul class="vertical-menu__list list-reset">
         <?php foreach ($arResult as $menuItem): ?>
           <li class="vertical-menu__item">

@@ -1,4 +1,6 @@
+  </div> <!-- div.container  -->
 </main>
+
 <?
 // Footer
 $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . "/layouts/footer.php"); ?>

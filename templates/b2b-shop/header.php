@@ -36,3 +36,4 @@ $curPage = $APPLICATION->GetCurPage(true);
 $APPLICATION->IncludeFile(SITE_TEMPLATE_PATH . "/layouts/header.php"); ?>
 
 <main>
+  <div class="container">
