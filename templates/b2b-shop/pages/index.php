@@ -3,7 +3,27 @@
 ?>
 <section class="first-screen mb-4">
   <div class="row">
-    <div class="col-3"></div>
+    <div class="col-3">
+        <?$APPLICATION->IncludeComponent(
+            "bitrix:menu",
+            "menu.catalog",
+            array(
+                "ROOT_MENU_TYPE" => "left",
+                "MENU_CACHE_TYPE" => "A",
+                "MENU_CACHE_TIME" => "36000000",
+                "MENU_CACHE_USE_GROUPS" => "Y",
+                "MENU_THEME" => "site",
+                "CACHE_SELECTED_ITEMS" => "N",
+                "MENU_CACHE_GET_VARS" => array(),
+                "MAX_LEVEL" => "3",
+                "CHILD_MENU_TYPE" => "left",
+                "USE_EXT" => "Y",
+                "DELAY" => "N",
+                "ALLOW_MULTI_SELECT" => "N",
+            ),
+            false
+        );?>
+    </div>
     <div class="col-9">
       <div class="row">
         <div class="col-8 mb-3">
@@ -98,7 +118,7 @@
 </section>
 
 <?php
-// Плашки триггеров
+// Плашки триггеров 2
 require($_SERVER["DOCUMENT_ROOT"] . "/" . SITE_TEMPLATE_PATH . "/parts/triggers-alt.php"); ?>
 
 <?php
@@ -107,15 +127,18 @@ require($_SERVER["DOCUMENT_ROOT"] . "/" . SITE_TEMPLATE_PATH . "/parts/partners.
 
 <?php
 // Готовые решения
-$APPLICATION->IncludeComponent("nbc:solutions-tabs", ".default");
-?>
+$APPLICATION->IncludeComponent("nbc:solutions-tabs", ".default", [], false); ?>
+
+<?php
+// Лучшие предложения
+$APPLICATION->IncludeComponent("bitrix:catalog.top", "best-offers", [], false); ?>
 
 <?
-// Лучшие предложения
-$APPLICATION->IncludeComponent(
-    "bitrix:catalog.top",
-    "best-offers",
-    false
-);
-?>
+// Карусель персонала
+$APPLICATION->IncludeComponent("nbc:staff-carousel", ".default", [], false); ?>
 
+<?php
+// Схема работы
+require($_SERVER["DOCUMENT_ROOT"] . "/" . SITE_TEMPLATE_PATH . "/parts/cashback-scheme.php"); ?>
+
+<? $APPLICATION->IncludeComponent("nbc:subscribe", ".default", [], false); ?>

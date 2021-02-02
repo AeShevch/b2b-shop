@@ -48,6 +48,12 @@ Encore.setOutputPath(PATH_TO_ROOT)
     template: "menu.main",
   })
 
+  // Компонент «Главное меню»
+  .BXComponentStyle("bitrix:menu", {
+    siteTemplate: ".default",
+    template: "menu.catalog",
+  })
+
   // Компонент «Вертикальное меню»
   .BXComponentStyle("bitrix:menu", {
     siteTemplate: ".default",
@@ -72,6 +78,14 @@ Encore.setOutputPath(PATH_TO_ROOT)
     siteTemplate: ".default",
     template: "best-offers",
   })
+
+  // Компонент выбора города
+  .BXComponentJs("nbc:staff-carousel")
+  .BXComponentStyle("nbc:staff-carousel")
+
+  // Сквозная форма подписки
+  .BXComponentStyle("nbc:subscribe")
+  .BXComponentJs("nbc:subscribe")
 
   .enablePostCssLoader((options) => {
     options.postcssOptions = {

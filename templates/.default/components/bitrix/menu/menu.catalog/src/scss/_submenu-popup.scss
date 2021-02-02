@@ -1,0 +1,62 @@
+@import "../../../../../../../b2b-shop/src/scss/2-helpers/mixins";
+@import "../../../../../../../b2b-shop/src/scss/1-vendors/bootstrap-custom";
+
+.submenu-popup {
+  padding-left: 10px;
+  font-size: 1rem;
+
+  &__inner {
+    box-shadow: var(--large-shadow);
+    background-color: var(--white);
+    border-radius: var(--base-radius);
+    padding: 2.85em;
+    width: map-get($container-max-widths, md);
+  }
+
+  &__list {
+    @include listReset;
+    display: flex;
+    flex-wrap: wrap;
+    //margin: 0 -3.57em -2.4em 0;
+
+    &-item {
+      //margin: 0 3.57em 2.4em 0;
+    }
+  }
+
+  &__title {
+    display: flex;
+    text-decoration: none;
+    color: var(--base-text-color);
+    align-items: center;
+    font-size: 1em;
+    margin-bottom: .5em;
+
+    &:hover {
+      color: var(--accent);
+    }
+  }
+
+  &__icon {
+    width: 1.7em;
+    height: 1.7em;
+    margin-right: .85em;
+  }
+
+  &__sub {
+    @include listReset;
+    padding-left: calc(1.7em + .85em);
+
+    li {
+      margin-bottom: .5em;
+    }
+
+    a {
+      display: block;
+      text-decoration: none;
+      color: var(--muted-text-color);
+      font-size: calc(1em - 2px);
+    }
+
+  }
+}

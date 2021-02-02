@@ -1,0 +1,51 @@
+.person-card {
+  display: flex;
+  padding: 3em 2em;
+  box-shadow: var(--large-shadow);
+  border-radius: var(--base-radius);
+  font-size: 1rem;
+
+  &__position {
+    color: var(--gray-text-color);
+    font-size: 1em;
+    line-height: 1;
+  }
+
+  &__image {
+    flex: 0 0 7.5em;
+    margin-right: 2em;
+    border-radius: 10em;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  &__name {
+    margin-bottom: 1em;
+    font-size: 1.4em;
+    font-weight: 700;
+  }
+
+  &__info {
+    color: var(--gray-text-color);
+    font-size: 1em;
+    line-height: 1.35;
+  }
+
+  &__email {
+    color: var(--dark-gray);
+    text-decoration: none;
+
+    svg {
+      margin-top: .2em;
+      fill: var(--accent);
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

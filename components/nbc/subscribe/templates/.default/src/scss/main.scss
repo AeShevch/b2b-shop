@@ -1,0 +1,22 @@
+.subscribe {
+  font-size: 1rem;
+  background-color: var(--white);
+  padding: 2.2em 0;
+
+  &__title {
+    font-size: 1.4em;
+    font-weight: 700;
+  }
+
+  &__input,
+  &__submit {
+    height: 3em!important;
+  }
+
+  &__input {
+    &_error {
+      animation-name: headShake;
+    }
+  }
+
+}

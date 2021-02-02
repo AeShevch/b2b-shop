@@ -1,0 +1,6 @@
+<?
+if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
+$arComponentDescription = array(
+    "NAME" => GetMessage("Подпишитесь на рассылку"),
+    "DESCRIPTION" => GetMessage("Форма подписки на mindbox"),
+);
